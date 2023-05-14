@@ -1,0 +1,21 @@
+﻿@model List<Lab2_IT_211189.Models.EventModel>
+@{
+    ViewBag.Title = "ShowAllEvents";
+}
+
+<h2 style="text-align:center">All Events: </h2>
+<ul>
+    @{
+        int i = 0;
+        foreach (var events in Model)
+        {
+            <li>
+                <h4 style="color: #5A5A5A;">Name: @events.Name - Locaiton: @events.Location </h4>
+                @Html.ActionLink("Edit", "EditEvent", new { id = i }) |
+                @Html.ActionLink("Delete", "DeleteEvent", new { id = i })
+            </li>
+            i++;
+        }
+    }
+</ul>
+

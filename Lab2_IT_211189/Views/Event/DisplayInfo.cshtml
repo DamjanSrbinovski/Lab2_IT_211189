@@ -1,0 +1,13 @@
+﻿@model Lab2_IT_211189.Models.EventModel
+@{
+    ViewBag.Title = "DisplayInfo";
+}
+
+<h2>You created this event: </h2>
+<br />
+@{ 
+    <h4>Event name - @Model.Name</h4>
+    <p>Event location - @Model.Location</p>
+    <button>@Html.ActionLink("Back to all events", "ShowAllEvents")</button>
+}
+
